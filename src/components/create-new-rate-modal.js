@@ -11,7 +11,7 @@ const CreateNewRateModal = ({ closeCreateNewModal, page, cleanUp, atm }) => {
     const [buy, setBuy] = useState("0")
     const [sell, setSell] = useState("0")
     const [curren, setCurren] = useState("")
-    const [sym, setSym] = useState()
+    const [sym, setSym] = useState("AED")
 
     const create = () => {
 
