@@ -11,7 +11,10 @@ const LogoutModal = ({setIsClose}) => {
         <p>Are you sure you want to log out of your account?</p>
         <div className="action-btn">
           <button onClick={() => setIsClose(false)}>Cancel</button>
-          <button>Log Out</button>
+          <button onClick={() => {
+            localStorage.clear()
+            window.location.reload()
+          }}>Log Out</button>
         </div>
       </section>
     </div>

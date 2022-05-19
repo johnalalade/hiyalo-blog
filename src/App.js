@@ -1,12 +1,16 @@
 import React from 'react';
-// import LoginForm from './components/login';
+
 import DashBoard from './components/dashboard';
+import LoginForm from './components/login';
 // import LogoutModal from './components/logout-modal';
 function App() {
   return (
     <div className="App">
       {/* <LoginForm /> */}
-      <DashBoard />
+      {!localStorage.getItem("user") ? 
+      <LoginForm /> : <DashBoard />
+      }
+      
       {/* <LogoutModal /> */}
     </div>
   );

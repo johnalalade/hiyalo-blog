@@ -16,25 +16,25 @@ function SideBar(props) {
         </div>
         <ul className="navbar">
             <li>
-                <a href="#" className="active-link">
+                <a href="#" className={props.page === "Black" ?"active-link" : "null"} onClick={() => {props.pagenation("Black")}}>
                     <span className="iconify" data-icon="icon-park-outline:stock-market"></span>
                     <p>Black Market Rate</p>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" className={props.page === "ATM" ?"active-link" : "null"} onClick={() => {props.pagenation("ATM")}}>
                     <span className="iconify" data-icon="fluent:money-24-regular"></span>
                     <p>ATM Rates</p>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" className={props.page === "CBN" ?"active-link" : "null"} onClick={() => {props.pagenation("CBN")}}>
                     <span className="iconify" data-icon="fluent:building-bank-16-regular"></span>
-                    <p>Bank Rates</p>
+                    <p>CBN Rates</p>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" className={props.page === "Crypto" ?"active-link" : "null"} onClick={() => {props.pagenation("Crypto")}}>
                     <span className="iconify" data-icon="bx:bitcoin"></span>
                     <p>Cryptocurrency</p>
                 </a>

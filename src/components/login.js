@@ -4,6 +4,7 @@ import './style.css';
 import Logo from '../components/Images/logo.svg';
 import LogoFooter from '../components/Images/footer-logo.svg';
 import EyeClosed from '../components/Images/eye-slash.svg';
+//import axios from "axios";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -12,8 +13,14 @@ class LoginForm extends React.Component {
     this.state = {
       email: '',
       password: '',
+      err: ""
     };
   }
+
+  // submit = () => {
+
+    
+  // }
 
   render() {
     return (
@@ -22,7 +29,7 @@ class LoginForm extends React.Component {
           <div className="logo">
             <img src={Logo} alt="" />
           </div>
-          <form onSubmit={this.handleSubmit} className="sign-up-form">
+          <form className="sign-up-form">
             <span>
               <label for="text">Email/Username</label>
               <input
@@ -44,10 +51,12 @@ class LoginForm extends React.Component {
               />
               <img src={EyeClosed} alt="" />
             </span>
+            
             <span>
               <a href="#">Forgot Password?</a>
             </span>
-            <button type="button" onClick={this.handleEvent}>
+            <p>{this.state.err}</p>
+            <button type="button" onClick={this.handleSubmit}>
               Login
             </button>
           </form>
@@ -91,13 +100,33 @@ class LoginForm extends React.Component {
       </div>
     );
   }
+  
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
   };
+
   handleSubmit = (event) => {
     console.log('submitting');
+
+    // axios.post("https://kudifx.herokuapp.com/api/v1/get-price", {email: this.state.email, password: this.state.password })
+    // .then((res)=> {
+
+    // })
+    // .catch(err =>{
+      
+    // })
+    if(["Yemi", "Odun", "Tosin", "John"].includes(this.state.email) && this.state.password === "Admin"){
+      localStorage.setItem("user", this.state.email)
+      window.location.reload()
+    }
+    else{
+      this.setState({
+        err: "Incorrect username or password"
+      })
+    }
+
     console.log(this.state);
   };
 }
