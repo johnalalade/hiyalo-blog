@@ -13,7 +13,8 @@ class LoginForm extends React.Component {
     this.state = {
       email: '',
       password: '',
-      err: ""
+      err: "",
+      view: "password"
     };
   }
 
@@ -43,13 +44,17 @@ class LoginForm extends React.Component {
             <span>
               <label htmlFor="password">Password</label>
               <input
-                type="password"
+                type={this.state.view}
                 name="password"
                 value={this.state.password}
                 onChange={this.handleChange}
                 id=""
               />
-              <img src={EyeClosed} alt="" />
+              <img src={EyeClosed} onClick={()=> {
+                this.setState({
+                  view: this.state.view === "text" ? "password" : "text"
+                })
+              }} alt="" />
             </span>
             
             <span>
