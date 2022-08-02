@@ -1,0 +1,91 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(20px);
+    height: 80px;
+    padding: 0 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1111;
+}
+.logo {
+    display: flex;
+    margin: auto 0;
+    height: 50px;
+}
+.hamburger {
+    display: none;
+}
+.nav-links {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+}
+.nav-links a {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.subscribe-btn {
+    display: flex;
+}
+.subscribe-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a1a1a;
+    background: #FFF;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    outline: none;
+    width: 190px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+@media  (max-width:968px) {
+    .nav-bar {
+        padding: 0 24px;
+    }
+}
+@media  (max-width:768px) {
+    .nav-bar {
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between !important;
+        height: 70px;
+    }
+    .logo {
+        height: 40px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        right: 1rem;
+    }
+    .hamburger .iconify {
+        font-size: 32px;
+        color: #fff;
+    }
+    .subscribe-btn {
+        display: none;
+        min-width: 140px;
+    }
+    .subscribe-btn button {
+        width: 100%;
+       max-width: 140px;
+        height: 45px;
+        font-size: 14px;
+    }
+}

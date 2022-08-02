@@ -1,0 +1,179 @@
+.blog-newsletter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+    padding:  0px 0px;
+    border-radius: 5px;
+}
+.blog-newsletter-container main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: 
+    #1A1A1A;
+    flex-basis: 100%;
+    margin:0 auto;
+    padding: 6rem 0px;
+    border-radius: 5px;
+}
+.blog-newsletter-container header {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    overflow: hidden;
+}
+.blog-newsletter-container header  h3{
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+.blog-newsletter-container header p {
+    font-family: 'gilroy-regular';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #F0F0F0;
+    margin-top: .5rem;
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+}
+.newsletter-form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.newsletter-form input {
+    font-family: 'gilroy-regular';
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #757575;
+    width: 100%;
+    max-width: 500px;
+    min-height: 40px;
+    padding: 1rem 0;
+    padding-left: .5rem;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+}
+.newsletter-form input::placeholder {
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: 16px;
+    color: #8C8C8C;
+    overflow: hidden;
+}
+.newsletter-form button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+.newsletter-form button p {
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    display: none;
+}
+.newsletter-form button .iconify {
+    transform: rotate(90deg);
+    font-size: 24px;
+    color: #fff;
+}
+@media  (min-width:968px) {
+    .newsletter-form input {
+        min-width: 600px;
+    }
+    .blog-newsletter-container {
+        margin: 8rem 80px;
+    }
+}
+
+@media  (max-width:768px) {
+    .blog-newsletter-container {
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        align-items: center;
+        margin: 6rem 1rem;
+        /* margin-top: 6rem; */
+    } 
+    .blog-newsletter-container main {
+        padding: 6rem 2rem;
+    }
+    .blog-newsletter-container header  h3{
+        font-size: 28px;
+        text-align: center;
+    }
+    .blog-newsletter-container header  p{
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 1rem;
+    }
+    .newsletter-form {
+        margin: auto 0rem;
+        display: flex;
+        flex-direction: column;
+        padding: 0rem;
+        margin-top: 3rem;
+        text-align: center;
+        width: 100%;
+    }
+    .newsletter-form input {
+        border: 1px solid #757575;
+        padding-top: 1rem;
+        border-radius: 5px;
+        outline: none;
+    }
+    .newsletter-form input::placeholder {
+        font-size: 16px;
+    }
+    .newsletter-form button {
+        position: relative;
+        right: 0;
+        transform: translate(0);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        margin-top: 2rem;
+        background: #D63434;
+        border: 1.5px solid #D63434;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+    }
+    
+    .newsletter-form button p{
+        display: flex;
+        font-size: 16px;
+        margin-top: 0;
+
+    }
+    .newsletter-form button .iconify {
+        transform: rotate(45deg);
+        font-size: 20px;
+    }
+}
