@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import BlogContainer from './components/BlogContainer';
 import MainFooter from './components/Footer';
@@ -20,18 +20,42 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <div>
-            <Routes>
-              <Route path="/" exact element={<BlogContainer />} />
-              <Route path="/blog/house-hunting" element={<BlogFull />} />
-              <Route path="/blog/where-to-live" element={<WhereToLive />} />
-              <Route path="/blog/five-factors-to-consider" element={<FiveFactoresToConsider />} />
-              <Route path="/blog/housing-crisis-in-Nigeria" element={<HousingCrisis />} />
-              <Route path="/blog/has-nollywood-been-lying-to-us-about-lagos" element={<NollywoodLying />} />
-              <Route path="/blog/stop-moving-to-lagos" element={<StopMovingToLagos />} />
-              <Route path="/blog/he-is-married" element={<HeIsMarried />} />
-            </Routes>
+            <Switch>
+              <Route path="/" exact>
+                <BlogContainer />
+              </Route>
+
+              <Route path="/blog/house-hunting">
+                <BlogFull />
+              </Route>
+
+              <Route path="/blog/where-to-live">
+                <WhereToLive />
+              </Route>
+
+              <Route path="/blog/five-factors-to-consider">
+                <FiveFactoresToConsider />
+              </Route>
+
+              <Route path="/blog/housing-crisis-in-Nigeria">
+                <HousingCrisis />
+              </Route>
+
+              <Route path="/blog/has-nollywood-been-lying-to-us-about-lagos">
+                <NollywoodLying />
+              </Route>
+
+              <Route path="/blog/stop-moving-to-lagos">
+                <StopMovingToLagos />
+              </Route>
+
+              <Route path="/blog/he-is-married">
+                <HeIsMarried />
+              </Route>
+
+            </Switch>
           </div>
-          
+
           <MainFooter />
         </div>
       </Router>
